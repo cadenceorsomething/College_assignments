@@ -23,4 +23,15 @@ export namespace cad {
 
 export namespace KD {
 	extern const int MAX_COUNT;
+	struct node {
+		int data;
+		node* next;
+
+		node(int in_data) : data(in_data), next(nullptr) {}
+	};
+	
+	bool dead_end	(node*);
+	void push_back	(node*&, int);
+	void push_front	(node*& , int);
+	void print_list	(node*);
 }

@@ -15,7 +15,16 @@ namespace KD {
 		return current->next == nullptr;
 	}
 	void push_back	(node*& head, int val)		 {
-		head->next = new node(val);			// INCORRECT LOGIC i will fix later dw
+		if (head == nullptr) return;			// if it is invalid then leave.
+
+		node* current = head;
+
+		while (!dead_end(current)) {
+			current = current->next;			// iterating until i find a dead end
+		}
+
+		current->next = new node(val);
+
 	}
 	void push_front	(node*& old_head, int val)	 {
 		node* new_head = new node(val);
