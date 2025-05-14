@@ -4,6 +4,8 @@ import <cmath>;
 
 // namespace to not confuse functions with others
 
+// word
+
 namespace cad {
 	namespace arr {
 		void square_array() {
