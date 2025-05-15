@@ -13,21 +13,7 @@ export namespace cad {
 	}
 	namespace pointer_testing {
 		using std::cout, std::endl;	// i will use them a ton
-
-		void demonstration1() {
-			// here we have a variable and a dynamically allocated pointer
-			int* ptr = new int;
-			*ptr = 5;
-			// if we dont delete it, it will take space in the memory as long as the program is running
-			cout << "Pointer number: " << *ptr << endl;
-			cout << "Address:" << ptr << endl;
-			ptr = nullptr;
-			cout << endl;
-			cout << "Address after deletion:" << ptr << endl;
-			delete ptr;
-
-
-		}
+		void demonstration1();
 	}
 	namespace structs {
 		struct distance;

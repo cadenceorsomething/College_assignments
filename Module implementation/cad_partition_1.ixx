@@ -60,7 +60,20 @@ namespace cad {
 		}
 	}
 	namespace pointer_testing {
-		// empty lol
+		using std::cout, std::endl;
+		void demonstration1() {
+			// here we have a variable and a dynamically allocated pointer
+			int* ptr = new int;
+			*ptr = 5;
+			// if we dont delete it, it will take space in the memory as long as the program is running
+			cout << "Pointer number: " << *ptr << endl;
+			cout << "Address:" << ptr << endl;
+			ptr = nullptr;
+			cout << endl;
+			cout << "Address after being null:" << ptr << endl;
+			delete ptr;
+		}
+
 	}
 	namespace structs {
 		struct distance {
@@ -93,7 +106,7 @@ namespace cad {
 			return count;
 		}
 		int			pow10					(int count) {
-			if (int count = 0) return 1;
+			if (count == 0) return 1;				// BUG FIX i somehoew typed int count = 0 IDK WHY
 			if (count < 0) {
 				std::cerr << "THIS FUNCTION ONLY WORKS WITH POSITIVES." << std::endl;
 				return -1;
@@ -137,8 +150,6 @@ namespace cad {
 				std::cout << n << " is a prime!" << std::endl;
 			else
 				std::cout << n << " is NOT a prime!" << std::endl;
-
-
 		}
 	}
 }
