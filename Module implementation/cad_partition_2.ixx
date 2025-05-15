@@ -12,7 +12,7 @@ namespace KD {
 	};
 
 	bool dead_end	(node* current)			 {
-		return current->next == nullptr;
+		return current->next == nullptr;		
 	}
 	void push_back	(node*& head, int val)		 {
 		if (head == nullptr) return;			// if it is invalid then leave.
